@@ -1,10 +1,18 @@
 class UsersController < ApplicationController
+    before_action :set_user, only: [:show, :edit, :update, :destroy]
 
     def show
+        @message = params[:message] if params[:message]
+        @message ||= false
+    end
+
+    def new
+        @user = User.new
     end
 
     def create
     end
+    
 
     def edit
     end
