@@ -15,7 +15,7 @@ class UsersController < ApplicationController
         respond_to do |format|
             if @user.save
                 session[:user_id] = @user.id
-                format.html { redirecto_to User_path(@user), notice: "Welcome to Taskly" }
+                format.html { redirecto_to user_path(@user), notice: "Welcome to Taskly" }
             else
                 format.html { render :new }
             end
