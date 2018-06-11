@@ -23,9 +23,10 @@
     <br>
 
     <% if @user %>
-    <p>
-    <%= link_to "Back to profile", user_path(@user), {:class => "btn btn-primary"} %>
-    </p>
-    <% else %>
-    <p><%= link_to "New Task", new_task_path %></p>
+        <p>
+            <%= link_to "Back to profile", user_path(@user), {:class => "btn btn-primary"} %>
+        </p>
+        <% else %>
+            <p><%= link_to "New Task", new_task_path %></p>
+        <% end %>
     <% end %>
