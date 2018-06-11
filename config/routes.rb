@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   resources :lists
-  root 'lists#index'
+  root 'welcome#home'
 end
