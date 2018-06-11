@@ -27,6 +27,13 @@ class UsersController < ApplicationController
     end
 
     def update
+        respond_to do |format|
+            if @user.params(user_params)
+                format.html { Redirect_to @user, notice: 'User updated successfully!'}
+            else
+                format.html { render :edit }
+            end
+        end
     end
 
     private
