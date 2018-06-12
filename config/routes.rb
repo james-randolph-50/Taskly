@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :lists
-  devise_for :users
+  #devise_for :users
   get 'welcome/home'
 
   authenticated :user do
