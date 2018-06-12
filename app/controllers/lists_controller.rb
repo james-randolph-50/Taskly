@@ -4,9 +4,14 @@ class ListsController < ApplicationController
     end
 
     def new
+        @list = List.new
     end
 
     def create
+        @list = List.find(params[:id])
+    end
+
+    def show
     end
 
     def edit
@@ -16,6 +21,8 @@ class ListsController < ApplicationController
     end
 
     def destroy
+        @list.delete
+        redirect_to "Where?"
     end
 
     private
