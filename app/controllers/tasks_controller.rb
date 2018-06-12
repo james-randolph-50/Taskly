@@ -18,5 +18,11 @@ class TasksController < ApplicationController
     def last_completed
         @task = Task.last_completed
     end
+
+    private
+
+    def task_params
+        params.require(:task).permit(:user_id, :list_id)
+    end
     
 end
